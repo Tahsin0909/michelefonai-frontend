@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #CFF8F1;
+  --primary: #CBB677;
   /* Light Primary */
-  --primary: #168B86;
   /* Dark Primary */
-  --accent: #E5E5FF;
+  --accent: #1B1F3A;               
   /* Accent Color */
   --surface: #FFEDE2;
   /* Surface/Background Color */
@@ -25,16 +24,17 @@ body {
 }
 
 @theme {
-  --breakpoint-*: initial;
-  --breakpoint-sm: ;
-  --breakpoint-md: ;
-  --breakpoint-lg: ;
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-surface: var(--surface);
   --color-card: var(--card);
-  --color-warning: var(--warning);
+  --color-warning: var(--warning);      
   --color-success: var(--success);
   --color-info: var(--info);
 }
+
+/* --breakpoint-*: initial;
+    --breakpoint-sm: ;
+    --breakpoint-md: ;
+    --breakpoint-lg: ; */
