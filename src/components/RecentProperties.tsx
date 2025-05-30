@@ -17,7 +17,7 @@ const RecentProperties = () => {
     };
 
     return (
-        <div className='section-gap container mx-auto'>
+        <div className='section-gap container mx-auto mt-40'>
             <h1 className='text-4xl font-bold mb-8'>Recent View Properties</h1>
             <MainSwiper items={fakeProperties}>
                 {fakeProperties.map(property => (

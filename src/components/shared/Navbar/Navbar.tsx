@@ -22,13 +22,15 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="relative z-50 flex justify-center mt-8">
-        <nav className="bg-white shadow-md py-4 px-8 rounded-2xl container w-full flex items-center justify-between">
+ <div className="fixed top-4 left-0 w-full z-50 flex justify-center inter-font">
+
+       <nav className="bg-white/90 backdrop-blur-md shadow-md py-4 md:px-8 rounded-2xl container w-full flex items-center justify-between">
+
           {/* Logo */}
-          <div className="text-2xl font-extrabold text-gray-900">Logo</div>
+          <div className="text-3xl md:text-[40px] poppins-font font-extrabold text-[#1B1F3A] ">Logo</div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
+          <ul className="hidden md:flex items-center space-x-6 text-sm md:text-base font-medium inter-font text-[#1B1F3A]">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/browse">Browse Properties</Link></li>
             <li><Link href="/contact">Contact us</Link></li>
@@ -39,12 +41,12 @@ const Navbar = () => {
           {/* Buttons - desktop */}
           <div className="hidden md:flex space-x-3">
             <Link href="/login">
-              <button className="px-4 py-2 border border-gray-500 text-sm rounded-md hover:bg-gray-100">
+              <button className="px-4 py-2 border border-gray-500 text-sm md:text-base rounded-md hover:bg-gray-100">
                 Login
               </button>
             </Link>
             <Link href="/register">
-              <button className="px-4 py-2 bg-yellow-600 text-white text-sm rounded-md hover:bg-yellow-700">
+              <button className="bg-[#D5BC79] hover:bg-[#c4ac6a] text-white py-2 px-4 rounded-md transition-colors duration-300 flex-grow text-center">
                 Register
               </button>
             </Link>
@@ -59,7 +61,7 @@ const Navbar = () => {
 
       {/* Mobile Sidebar Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setIsOpen(false)} />
+        <div className="fixed inset-0 bg-black/90 bg-opacity-50 z-40" onClick={() => setIsOpen(false)} />
       )}
 
       {/* Mobile Sidebar */}
@@ -70,14 +72,14 @@ const Navbar = () => {
       >
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b">
-          <span className="text-lg font-bold text-gray-900">Logo</span>
+          <span className="text-3xl md:text-[40px] poppins-font font-extrabold text-[#1B1F3A]">Logo</span>
           <button onClick={() => setIsOpen(false)} aria-label="Close menu">
             <X size={24} />
           </button>
         </div>
 
         {/* Nav Links */}
-        <nav className="flex flex-col p-4 space-y-4 text-gray-700 font-medium">
+        <nav className="flex flex-col p-4 space-y-4 text-sm md:text-base font-medium inter-font text-[#1B1F3A]">
           <Link href="/" onClick={handleLinkClick}>Home</Link>
           <Link href="/browse" onClick={handleLinkClick}>Browse Properties</Link>
           <Link href="/contact" onClick={handleLinkClick}>Contact us</Link>
